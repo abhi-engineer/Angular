@@ -1,0 +1,14 @@
+<div>
+    <!-- Interpolation -->
+    <h1>Title {{title}}</h1>    
+
+    <!-- Property Binding -->
+    <button [disabled] = "isDiabled">Button</button>
+
+    <!-- Event Binding -->
+    <button (click)="onClick()">create Event for event binding</button>
+
+    <!-- Two way binding -->
+    <input type="text" [(ngModel)]="name" placeholder="enter name">
+    <p> data from input field : {{name}}</p>
+</div>

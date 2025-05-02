@@ -1,0 +1,40 @@
+<h1>Control statements</h1>
+
+<!-- if -->
+@if (user.isLoggedIn) {
+    <p>user logged in {{user.name}}</p>
+}
+@else {
+    <p>Please log in</p>
+}
+
+
+<!-- for -->
+@for (product of products; track product.id) {
+    <div>{{product.id}} : {{ product.name }}</div>
+  }
+
+
+<!-- switch -->
+@switch (status) {
+  @case ('loading') {
+    <p>Loading...</p>
+  }
+  @case ('success') {
+    <p>Success!</p>
+  }
+  @default {
+    <p>Unknown status</p>
+  }
+}
+
+  
+<!-- defer -->
+@defer (when dataLoaded) {
+  <p>Data ready!</p>
+} @placeholder {
+  <p>Loading...</p>
+}
+
+<!-- teneray operator -->
+<p>{{ 5 > 4 ? true : false}}</p>
