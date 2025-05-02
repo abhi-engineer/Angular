@@ -1,3 +1,16 @@
 <h1>Pipe components</h1>
 
-<p>{{today | date:'fullDate' }}</p>
+<p>{{num | number:'1.1-2' }}</p>
+<p>{{1 | percent }}</p>
+
+{{ messageCount | i18nPlural: messages }}
+<br>
+{{ gender | i18nSelect: genderMap }}
+<br>
+<ul>
+    <!-- The KeyValuePipe transforms an object or a Map into an array of key-value pairs, which makes it easier to iterate over them in templates using *ngFor -->
+  <li *ngFor="let item of user | keyvalue">
+    {{ item.key }}: {{ item.value }}
+  </li>
+</ul>
+
